@@ -7,17 +7,33 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%: Page.Title %> - 我的 ASP.NET  應用程式</title>
+
+    <title><%: Page.Title %></title>
+
+<%--    <link rel="stylesheet" href="/Content/layout.css" />
+    <link rel="stylesheet" href="/Content/type.css" />
+    <link rel="stylesheet" href="/Content/nav.css" />
+    <link rel="stylesheet" href="/Content/fix.css" />
+    <link rel="stylesheet" media="print" href="/Content/print.css" />
+    <link rel="stylesheet" href="/Content/jquery-ui.min.css" />--%>
+
+    <link rel="stylesheet" href="Content/test.css">
+
+    <style>
+	    table.table_th_line td{text-align: center;}	  
+    </style>	  
+
+    <link rel="icon" type="image/x-icon" href="~/favicon.ico" />
 
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
 
     <webopt:bundlereference runat="server" path="~/Content/css" />
-    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
 </head>
 <body>
+
     <form runat="server">
         <asp:ScriptManager runat="server">
             <Scripts>
@@ -39,31 +55,13 @@
             </Scripts>
         </asp:ScriptManager>
 
-        <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" runat="server" href="~/">應用程式名稱</a>
-                </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/">首頁</a></li>
-                        <li><a runat="server" href="~/About">關於</a></li>
-                        <li><a runat="server" href="~/Contact">連絡人</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - 我的 ASP.NET  應用程式</p>
+                <p class="red"> 版權所有©2016 工業技術研究院 | 限同仁院內公務使用 禁止對外公開 | 網站製作：資科中心</p>  
+                <p>聯絡窗口：劉怡均 ( 分機：15656 ) | <a href="#" >意見反應 </a> | <a href="#" >資料維護與說明 </a></p>            
             </footer>
         </div>
 

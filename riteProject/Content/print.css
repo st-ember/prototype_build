@@ -1,0 +1,14 @@
+/* Welcome to Compass. Use this file to define print styles.
+ * Import this file using the following HTML or equivalent: * 
+ * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
+
+
+     body {
+      text-align:justify;
+      margin-left:5%;
+      margin-right:5%;
+      }
+
+     .function_description,nav, h2,h3,h4,h5,.breadcrumb{display: none;}
+     .header > h1{width:100%;}
+
